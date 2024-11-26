@@ -11,7 +11,6 @@ export const customCounter = () => {
         setCount(0);
     }
 
-
     return {
         count,
         increseBy,

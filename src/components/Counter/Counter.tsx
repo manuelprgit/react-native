@@ -1,12 +1,3 @@
-// hacer un estado global que tenga la funcion de:
-/**
- * sumar un numero.
- * Restar un numero.
- * Sumar de 10 en 10.
- * resetear el label.
- */
-
-import { useState } from "react"
 import { customCounter } from "../../Hooks/CounterHook";
 
 export const Counter = () => {
