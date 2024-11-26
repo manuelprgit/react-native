@@ -1,4 +1,4 @@
-import { AuthProvider } from "./assets/Context/AuthContext/AuthContext"
+import { CounterProvider } from "./assets/Context/CounterContext"
 import { Counter } from "./components/Counter/Counter"
 
 
@@ -6,9 +6,9 @@ import { Counter } from "./components/Counter/Counter"
 function App() {
 
   return (
-    <AuthProvider>
+    <CounterProvider>
       <Counter />
-    </AuthProvider>
+    </CounterProvider>
   )
 }
 

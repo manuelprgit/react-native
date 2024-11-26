@@ -1,7 +1,9 @@
 // import { customCounter } from "../../Hooks/CounterHook";
 
 import { useContext } from "react";
-import { AuthContext } from "../../assets/Context/AuthContext/AuthContext";
+import { CounterContext } from "../../assets/Context/CounterContext";
+
+
 
 export const Counter = () => {
 
@@ -12,7 +14,7 @@ export const Counter = () => {
         count,
         increseBy,
         reseatCounter
-    } = useContext(AuthContext);
+    } = useContext(CounterContext); 
 
     return (
         <div className="flex flex-col items-center gap-5">
