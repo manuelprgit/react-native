@@ -1,12 +1,18 @@
-import { customCounter } from "../../Hooks/CounterHook";
+// import { customCounter } from "../../Hooks/CounterHook";
+
+import { useContext } from "react";
+import { AuthContext } from "../../assets/Context/AuthContext/AuthContext";
 
 export const Counter = () => {
+
+    const buttonClasses = (color:string) => 
+        `w-14 bg-${color}-400 m-2 h-9 rounded-lg hover:bg-${color}-600 transition active:bg-${color}-400`
     
     const {
-        count, 
+        count,
         increseBy,
         reseatCounter
-    } = customCounter();
+    } = useContext(AuthContext);
 
     return (
         <div className="flex flex-col items-center gap-5">
@@ -15,31 +21,31 @@ export const Counter = () => {
             <div className="flex">
                 <button 
                     onClick={()=>{increseBy(+10)}}
-                    className="w-14 bg-blue-400 m-2 h-9 rounded-lg hover:bg-blue-600 transition active:bg-blue-400"
+                    className={buttonClasses('blue')}
                 >
                     +10
                 </button>
                 <button 
                     onClick={()=>{increseBy(+1)}}
-                    className="w-14 bg-blue-400 m-2 h-9 rounded-lg hover:bg-blue-600 transition active:bg-blue-400"
+                    className={buttonClasses('blue')}
                 >
                     +1
                 </button>
                 <button 
                     onClick={()=>{increseBy(-1)}}
-                    className="w-14 bg-red-400 m-2 h-9 rounded-lg hover:bg-red-600 transition active:bg-red-400"
+                    className={buttonClasses('red')}
                 >
                     -1
                 </button>
                 <button 
                     onClick={()=>{increseBy(-10)}}
-                    className="w-14 bg-red-400 m-2 h-9 rounded-lg hover:bg-red-600 transition active:bg-red-400"
+                    className={buttonClasses('red')}
                 >
                     -10
                 </button>
                 <button 
                     onClick={()=>{reseatCounter()}}
-                    className="w-14 bg-gray-400 m-2 h-9 rounded-lg hover:bg-gray-600 transition active:bg-gray-400"
+                    className={buttonClasses('gray')}
                 >
                     Reset
                 </button>

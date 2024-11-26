@@ -1,11 +1,14 @@
+import { AuthProvider } from "./assets/Context/AuthContext/AuthContext"
 import { Counter } from "./components/Counter/Counter"
+
+
 
 function App() {
 
   return (
-    <div className="flex w-100 items-center justify-center h-96">
+    <AuthProvider>
       <Counter />
-    </div>
+    </AuthProvider>
   )
 }
 
